@@ -8,5 +8,14 @@
     </head>
     <body>
         <h1>hello pwa</h1>
+        <script>
+            console.log('start')
+            // 创建一个web worker
+            const worker = new Worker('worker.js')
+            worker.addEventListener('message', (e) => {// 监听异步操作
+                console.log(e.data)
+            })
+            console.log('end')
+        </script>
     </body>
 </html>
